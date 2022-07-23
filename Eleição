@@ -1,0 +1,22 @@
+candidato_889= 0
+candidato_847= 0
+candidato_515= 0
+branco_nulos= 0
+voto= int (input("Digite o número do candidato escolhido: "))
+
+try:
+    if voto==889:
+        candidato_889= candidato_889 + 1
+    elif voto== 847:
+        candidato_847= candidato_847 + 1
+    elif voto== 515:
+        candidato_515= candidato_515 + 1
+    elif voto==0 or voto != 889 or voto != 847 or voto != 515:
+        branco_nulos= branco_nulos + 1
+except:
+    print ("Ocorreu um erro. Vote novamente")
+
+print ("O candidato_889 teve", candidato_889, "votos")
+print ("O candidato_847 teve", candidato_847, "votos")
+print ("O candidato_515 teve", candidato_515, "votos")
+print ("Brancos e nulos:", branco_nulos )
