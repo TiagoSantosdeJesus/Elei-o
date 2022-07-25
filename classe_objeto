@@ -1,0 +1,14 @@
+class aluno:
+    def __init__ (self,nome, idade):
+        self.nome= nome
+        self.idade= idade
+    def __str__ (self):
+        return self.nome
+    def __str__ (self):
+        return self.idade
+a1= ("Tiago Santos", 25)
+a2= ("João", 20)
+a3= ("Maria", 30)
+print (a1)
+print (a2)
+print (a3)
