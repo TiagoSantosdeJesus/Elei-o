@@ -1,0 +1,8 @@
+// Em python
+
+num1 = int (input("Informe um número: "))
+num2 = int (input("Informe outro número: "))
+try:
+    print ("O resultado da divisão é: ",num1/num2)
+except ZeroDivisionError as Error:
+    print ("Não é possível divisão por zero")
