@@ -1,0 +1,13 @@
+Var
+palavra: caracter
+editada: caracter
+
+Inicio
+
+escreval ("Insira uma palavra: ")
+leia (palavra)
+escreval (minusc (palavra))
+escreval (maiusc (palavra))
+escreval (compr(palavra), " letras")
+
+fimalgoritmo
