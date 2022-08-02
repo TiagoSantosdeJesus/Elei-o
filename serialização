@@ -1,0 +1,6 @@
+public class pessoa implements Serializable {
+    public int idade;
+    fileoutputstream idade= new fileoutputstream ("Tuma.idade");
+    ObjectOutputStream id = new ObjectOutputStream(idade);
+    id.writeObject (idade1);
+    id.close();
