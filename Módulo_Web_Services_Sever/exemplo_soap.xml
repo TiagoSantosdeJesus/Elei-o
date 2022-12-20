@@ -1,0 +1,36 @@
+<!-- requisição SOAP em XML -->
+
+<?xml version="1.0"?>
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope">
+
+<soap:Header>
+</soap:Header>
+
+<soap:Body>
+    <m:GetUser>
+        <m:UserId>1</m:UserId>
+    </m:GetUser>
+</soap:Body>
+
+</soap:Envelope>
+
+<!-- resposta SOAP em XML -->
+
+<?xml version="1.0"?>
+
+<soap:Envelope
+xmlns:soap="http://www.w3.org/2003/05/soap-envelope/"
+soap:encodingStyle="http://www.w3.org/2003/05/soap-encoding">
+
+<soap:Body>
+    <m:GetUserResponse>
+        <m:Nome>João José</m:Nome>
+        <m:Endereço>Rua Marechal, 01</m:Endereço>
+        <municipio>Jaboatão</municipio>
+        <CEP>00000000</CEP>
+        <m:UF>Pe</m:UF>
+        <m:Contato>81 911111111</Contato>
+    </m:GetUserResponse>
+</soap:Body>
+
+</soap:Envelope>
