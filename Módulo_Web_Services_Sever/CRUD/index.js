@@ -6,7 +6,11 @@ const app = express();
 const porta = 8080;
 
 // array de livros que vamos utilizar como se fosse o banco de dados
-let livros = [];
+let livros = [
+    {Nome: 'teste',
+    Autor: 'teste',
+    ISBN:'teste'}
+];
 
 app.use(cors());
 
@@ -16,7 +20,7 @@ app.use(bodyParser.json());
 
 
 app.get('/books', (req, res) => {
-    res.send(livros)
+    res.status(200).send(livros)
 });
 
 app.post('/books', (req,res) => {
@@ -28,7 +32,7 @@ app.post('/books', (req,res) => {
     // add no array de livros
     livros.push(livro)
 
-    res.send("Livro inserido com sucesso");
+    res.status(201).send("Livro inserido com sucesso");
 });
 
 app.put('/books/:index', (req,res) => {
@@ -36,13 +40,13 @@ app.put('/books/:index', (req,res) => {
     const {livro} = req.body;
 
     livros[index] = livro;
-    res.send("Atualizado com sucesso");
+    res.status(200).send("Atualizado com sucesso");
 });
 
 app.delete('/books/:index', (req, res) => {
     const {index} = req.params;
     livros.splice(index, 1);
-    res.send("Excluído com sucesso");
+    res.status(200).send("Livro excluído com sucesso");
 });
 
 
